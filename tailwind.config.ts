@@ -23,7 +23,10 @@ const config: Config = {
       "slightblue": " #b1c0cf",
       "qbg":"#e7dbdb",
       "qblue":"#0262b4",
-      "white":"#f9f9f9"
+      "white":"#f9f9f9",
+      "reeed":"#FF5B4E",
+      "mango":"FFCC4F",
+      "green":"#A8F37C",
 
 
     }
