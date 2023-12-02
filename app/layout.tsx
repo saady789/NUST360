@@ -1,3 +1,4 @@
+"use client"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -7,10 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Provider } from 'react-redux'
 import { store } from './_redux/store'
 
-export const metadata: Metadata = {
-  title: 'Nust360',
-  description: 'Elevating Education, Empowering Administration',
-}
+// export const metadata: Metadata = {
+//   title: 'Nust360',
+//   description: 'Elevating Education, Empowering Administration',
+// }
 
 export default function RootLayout({
   children,

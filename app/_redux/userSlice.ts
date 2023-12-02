@@ -3,34 +3,15 @@
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 
 interface State { 
-    currentUser: null | object ,
-    currentPage:"main" | "search" | "liked"
-    modal : "close" | "open",
-    socket :"on" | "off",
-    mySongs: object,
-    navigation:string[],
-    currentSong:object | null,
-    likedSongs:object | null,
-    allSongs:object | null
-}
+    currentType:"student"|"faculty"|"admin",
+    currentPage:"home" | "result" | "attendance"
 
+}
 const initialState : State = {
-    currentUser:null,
-    modal:"close",
-    socket:"on",
-    currentPage:"main",
-    mySongs:[],
-    navigation:[],
-    currentSong:null,
-    likedSongs:[],
-    allSongs:[]
+    currentType:"student",
+    currentPage:"home"
 
 };
-
-
-
-
-
 
 export const userSlice = createSlice({
     name: 'nust',
@@ -38,8 +19,8 @@ export const userSlice = createSlice({
     // The `reducers` field lets us define reducers and generate associated actions
     reducers: {
         
-        setCurrentUser:(state,action) => {
-            state.currentUser = action.payload;
+        setCurrentPage:(state,action) => {
+            state.currentPage = action.payload;
         }
         
         
@@ -78,5 +59,5 @@ export const userSlice = createSlice({
 
 });
 
-export const { setCurrentUser} = userSlice.actions;
+export const { setCurrentPage} = userSlice.actions;
 export default userSlice.reducer;
