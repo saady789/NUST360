@@ -2,9 +2,9 @@
 'use client'
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 
-interface State { 
+export interface State { 
     currentType:"student"|"faculty"|"admin",
-    currentPage:"home" | "result" | "attendance"
+    currentPage:string
 
 }
 const initialState : State = {
@@ -21,6 +21,9 @@ export const userSlice = createSlice({
         
         setCurrentPage:(state,action) => {
             state.currentPage = action.payload;
+        },
+        setCurrentType:(state,action) => {
+            state.currentType = action.payload;
         }
         
         
@@ -59,5 +62,5 @@ export const userSlice = createSlice({
 
 });
 
-export const { setCurrentPage} = userSlice.actions;
+export const { setCurrentPage,setCurrentType} = userSlice.actions;
 export default userSlice.reducer;
