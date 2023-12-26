@@ -19,7 +19,7 @@ const page = () => {
       <Navbar />
       <div className='flex h-screen w-screen'>
         <div className='w-52'><Sidebar/></div>
-        <div className='w-3/4'>
+        <div className='w-full'>
           {currentPage=="a_createStudent" && <Student />
           }
           {currentPage=="a_createFaculty" && 

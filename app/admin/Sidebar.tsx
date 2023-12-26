@@ -43,7 +43,7 @@ const Sidebar = () => {
         <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createCourse}>Create Course</div>
         <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createInvoice}>Create Invoice</div>
         <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={enrolStudent}>Enrol Students</div>
-        <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={enrolStudent}>Logout</div>
+        <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={handleLogout}>Logout</div>
 
 
 
