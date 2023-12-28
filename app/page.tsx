@@ -55,23 +55,24 @@ export default function Home() {
   }
 
   
-  useEffect(() => {
-    const result: string | null = localStorage.getItem('user');
+  // useEffect(() => {
+  //   console.log("useeffect was called");
+  //   const result: string | null = localStorage.getItem('user');
     
-    const setUser = async () => {
-      if (result) {
-        try {
-          const parsedResult = JSON.parse(result);
-          await dispatch(setCurrentUser(parsedResult.data));
-        } catch (error) {
-          // Handle JSON parsing error if necessary
-          console.error('Error parsing user data:', error);
-        }
-      }
-    };
+  //   const setUser = async () => {
+  //     if (result) {
+  //       try {
+  //         const parsedResult = JSON.parse(result);
+  //         await dispatch(setCurrentUser(parsedResult.data));
+  //       } catch (error) {
+  //         // Handle JSON parsing error if necessary
+  //         console.error('Error parsing user data:', error);
+  //       }
+  //     }
+  //   };
 
-    setUser();
-  }, []);
+  //   setUser();
+  // }, []);
 
  
   

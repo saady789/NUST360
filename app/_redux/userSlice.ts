@@ -27,8 +27,12 @@ export const userSlice = createSlice({
         setCurrentType:(state,action) => {
             state.currentType = action.payload;
         },
-        setCurrentUser:(state,action) => {  
-            state.currentUser = action.payload;
+        setCurrentUser:(state,action) => { 
+            console.log(action); 
+            if(action.payload){
+                state.currentUser = action.payload;
+            }
+           
         }
         
         

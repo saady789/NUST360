@@ -10,9 +10,35 @@ import Faculty from './faculty'
 import Invoice from './invoice'
 import Department from './department'
 import { useAppSelector } from '../_hooks/hooks'
+import { useEffect } from 'react'
+import { setCurrentUser } from '../_redux/userSlice';
+import { useDispatch } from 'react-redux';
+
 
 const page = () => {
   const currentPage = useAppSelector(state=>state.user.currentPage);
+  const currentUser = useAppSelector(state=>state.user.currentUser);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log("useeffect was called");
+    const result: string | null = localStorage.getItem('user');
+    
+    const setUser = async () => {
+      if (result) {
+        try {
+          const parsedResult = JSON.parse(result);
+          await dispatch(setCurrentUser(parsedResult));
+        } catch (error) {
+          // Handle JSON parsing error if necessary
+          console.error('Error parsing user data:', error);
+        }
+      }
+    };
+
+    setUser();
+  }, []);
+  
 
   return (
     <div className='bg-qbg '>
