@@ -4,12 +4,14 @@ import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 
 export interface State { 
     currentType:"student"|"faculty"|"admin",
-    currentPage:string
+    currentPage:string,
+    currentUser?:any
 
 }
 const initialState : State = {
     currentType:"student",
-    currentPage:"home"
+    currentPage:"home",
+    currentUser:null
 
 };
 
@@ -24,6 +26,9 @@ export const userSlice = createSlice({
         },
         setCurrentType:(state,action) => {
             state.currentType = action.payload;
+        },
+        setCurrentUser:(state,action) => {  
+            state.currentUser = action.payload;
         }
         
         
@@ -62,5 +67,5 @@ export const userSlice = createSlice({
 
 });
 
-export const { setCurrentPage,setCurrentType} = userSlice.actions;
+export const { setCurrentPage,setCurrentType,setCurrentUser} = userSlice.actions;
 export default userSlice.reducer;

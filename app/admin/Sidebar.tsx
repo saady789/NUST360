@@ -36,7 +36,7 @@ const Sidebar = () => {
 
   return (
     <div className='flex flex-col justify-start items-start m-2 border-r-2 h-full'>
-        <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createAdmin}>Create Admin</div>
+        {/* <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createAdmin}>Create Admin</div> */}
         <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createStudent}>Create Student</div>
         <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createFaculty}>Create Faculty</div>
         <div className='p-2 rounded-lg cursor-pointer hover:brightness-125 hover:bg-lightblue w-full font-semibold' onClick={createDepartment}>Create Department</div>
